@@ -21,7 +21,7 @@ Route::get('/branding', [FrontController::class,'branding'])->name('branding');
 Route::get('/desarrollo', [FrontController::class,'desarrollo'])->name('desarrollo');
 Route::get('/marketing', [FrontController::class,'marketing'])->name('marketing');
 Route::get('/contacto', [FrontController::class,'contacto'])->name('contacto');
-Route::resource('admin/contactos',ContactoController::class)->middleware('auth')->names('contactos');
+Route::resource('admin/contactos',ContactoController::class)->names('contactos');
 
 
 

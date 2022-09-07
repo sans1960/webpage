@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Redirect;
 
 class ContactoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('store');
+ 
+       
+    }
     public function index(){
         $contactos = Contacto::paginate(6);
         return view('admin.contactos',compact('contactos'));
